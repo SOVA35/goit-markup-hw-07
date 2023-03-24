@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .burger-btn {
+    display: none;
+  }
+
+  .address-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: auto;
+  }
+  .logo{
+    margin-right: 0;
+  }
+  .navbar {
+  display: flex;
+  margin-left: 0;
+  gap: 40px;
+}
+
+}
+@media screen and (max-width: 1120px) {
+}
