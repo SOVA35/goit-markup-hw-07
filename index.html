@@ -17,61 +17,114 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="stylesheet" href="./css/tablet.css" />
-    <link rel="stylesheet" href="./css/desctop.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <header class="page-hader">
       <!--navigation-->
       <div class="container">
         <div class="header-section">
-          <nav class="nav-block">
-            <a href="./index.html" class="logo"
-              ><span class="logo-part">Web</span>Studio</a
-            >
-            <ul class="navbar">
-              <li class="navbar-list item list">
-                <a href="./index.html" class="navbar-link current">Studio</a>
-              </li>
-              <li class="navbar-list item list">
-                <a href="./portfolio.html" class="navbar-link">Portfolio</a>
-              </li>
-              <li class="navbar-list item list">
-                <a href="#" class="navbar-link">Contacts</a>
-              </li>
-            </ul>
-            <button type="button" class="burger-btn is-open" data-menu-button>
-              <svg
-                class="burger"
-                width="20"
-                height="20"
-                aria-label="mobile menu button"
-              >
-                <use
-                  class="icon-menu"
-                  href="./images/form-icon/symbol-defs.svg#icon-burger"
-                ></use>
-                <use
-                  class="icon-cross"
-                  href="./images/social_links/symbol-defs.svg#icon-close-icon"
-                ></use>
-              </svg>
-            </button>
-          </nav>
-
-          <address class="address">
-            <ul class="address-block">
-              <li class="contacts-list item list">
-                <a href="mailto:info@devstudio.com" class="contacts-mail"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="contacts-list item list">
-                <a href="tel:+110001111111" class="contacts-tel"
-                  >+11 (000) 111-11-11</a
-                >
-              </li>
-            </ul>
-          </address>
+          <a href="./index.html" class="logo"
+            ><span class="logo-part">Web</span>Studio</a
+          >
+          <button
+            data-menu-button
+            type="button"
+            class="burger-btn js-open-menu"
+          >
+            <svg class="burger" aria-label="mobile menu button">
+              <use
+                class="icon-menu"
+                href="./images/form-icon/symbol-defs.svg#icon-burger"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/social_links/symbol-defs.svg#icon-close-icon"
+              ></use>
+            </svg>
+          </button>
+          <div class="container-menu js-menu-container">
+            <div class="container-nav">
+              <button class="close-mobile-menu js-close-menu" type="button">
+                <svg class="close-icon">
+                  <use
+                    href="./images/social_links/symbol-defs.svg#icon-close-icon"
+                  ></use>
+                </svg>
+              </button>
+              <nav class="nav-block">
+                <ul class="navbar">
+                  <li class="navbar-list item list">
+                    <a href="./index.html" class="navbar-link current"
+                      >Studio</a
+                    >
+                  </li>
+                  <li class="navbar-list item list">
+                    <a href="./portfolio.html" class="navbar-link">Portfolio</a>
+                  </li>
+                  <li class="navbar-list item list">
+                    <a href="#" class="navbar-link">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="container-address">
+              <address class="address">
+                <ul class="address-block">
+                  <li class="contacts-list item list">
+                    <a href="mailto:info@devstudio.com" class="contacts-mail"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="contacts-list item list">
+                    <a href="tel:+110001111111" class="contacts-tel"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="mobil-menu-link">
+              <ul class="personal-links list">
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -82,7 +135,7 @@
         <div class="container">
           <h1 class="hero-title">
             Effective Solutions <br />
-            for Your Business
+            For Your Business
           </h1>
           <button data-modal-open class="hero-btn" type="button">
             Order Service
@@ -236,7 +289,11 @@
           <ul class="work_image-set">
             <li class="work-list item list">
               <img
-                src="./images/new_images/photo1.jpg"
+                srcset="
+                  ./images/images/desktop/work_images/photo1.jpg        1x,
+                  ./images/images/desktop/work_images/photo1@2x-min.jpg 2x
+                "
+                src="./images/images/desktop/work_images/photo1.jpg"
                 width="360"
                 height="300"
                 alt="computer monitor"
@@ -244,7 +301,11 @@
             </li>
             <li class="work-list item list">
               <img
-                src="./images/new_images/photo2.jpg"
+                srcset="
+                  ./images/images/desktop/work_images/photo2.jpg        1x,
+                  ./images/images/desktop/work_images/photo2@2x-min.jpg 2x
+                "
+                src="./images/images/desktop/work_images/photo2.jpg"
                 width="360"
                 height="300"
                 alt="slides"
@@ -252,7 +313,11 @@
             </li>
             <li class="work-list item list">
               <img
-                src="./images/new_images/photo3.jpg"
+                srcset="
+                  ./images/images/desktop/work_images/photo3.jpg        1x,
+                  ./images/images/desktop/work_images/photo3@2x-min.jpg 2x
+                "
+                src="./images/images/desktop/work_images/photo3.jpg"
                 width="360"
                 height="300"
                 alt="phone in hand"
@@ -270,7 +335,8 @@
           <ul class="team-list list">
             <li class="team-block item">
               <img
-                src="./images/team/Mark.jpg"
+                srcset="./images/images/mobile/team/Mark-mobile2x-min.jpg 2x"
+                src="./images/images/mobile/team/Mark.jpg"
                 width="264"
                 alt="Mark Guerrero Product Designer"
                 class="team-image"
@@ -324,7 +390,12 @@
             </li>
 
             <li class="team-block item">
-              <img src="./images/team/Tom.jpg" width="264" alt="Tom Ford" />
+              <img
+                srcset="./images/images/mobile/team/Tom-mobile2x-min.jpg 2x"
+                src="./images/images/mobile/team/Tom.jpg"
+                width="264"
+                alt="Tom Ford"
+              />
 
               <div class="team-content">
                 <div class="team-person">
@@ -376,7 +447,8 @@
 
             <li class="team-block item">
               <img
-                src="./images/team/Camila.jpg"
+                srcset="./images/images/mobile/team/Camila-mobile2x-min.jpg 2x"
+                src="./images/images/mobile/team/Camila.jpg"
                 width="264"
                 alt="Camila Garcia Marketing"
               />
@@ -430,7 +502,8 @@
 
             <li class="team-block item">
               <img
-                src="./images/team/Daniel.jpg"
+                srcset="./images/images/mobile/team/Daniel-mobile2x-min.jpg 2x"
+                src="./images/images/mobile/team/Daniel.jpg"
                 width="264"
                 alt="Tom Ford Frontend Developer"
               />
@@ -634,8 +707,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
-    <script>
-      src = "./js/mobile.js";
-    </script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>

@@ -13,48 +13,117 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
+     <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <header class="page-hader">
       <!--navigation-->
       <div class="container">
         <div class="header-section">
-          <nav class="nav-block">
-            <a href="./index.html" class="logo"
-              ><span class="logo-part">Web</span>Studio</a
-            >
-            <ul class="navbar">
-              <li class="navbar-list item list">
-                <a href="./index.html" class="navbar-link">Studio</a>
-              </li>
-              <li class="navbar-list item list">
-                <a href="./portfolio.html" class="navbar-link current"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="navbar-list item list">
-                <a href="" class="navbar-link">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-
-          <address class="address">
-            <ul class="address-block">
-              <li class="contacts-list item list">
-                <a href="mailto:info@devstudio.com" class="contacts-mail"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="contacts-list item list">
-                <a href="tel:+110001111111" class="contacts-tel"
-                  >+11 (000) 111-11-11</a
-                >
-              </li>
-            </ul>
-          </address>
+          <a href="./index.html" class="logo"
+            ><span class="logo-part">Web</span>Studio</a
+          >
+          <button
+            data-menu-button
+            type="button"
+            class="burger-btn js-open-menu"
+          >
+            <svg class="burger" aria-label="mobile menu button">
+              <use
+                class="icon-menu"
+                href="./images/form-icon/symbol-defs.svg#icon-burger"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/social_links/symbol-defs.svg#icon-close-icon"
+              ></use>
+            </svg>
+          </button>
+          <div class="container-menu js-menu-container">
+            <div class="container-nav">
+              <button class="close-mobile-menu js-close-menu" type="button">
+                <svg class="close-icon">
+                  <use
+                    href="./images/social_links/symbol-defs.svg#icon-close-icon"
+                  ></use>
+                </svg>
+              </button>
+              <nav class="nav-block">
+                <ul class="navbar">
+                  <li class="navbar-list item list">
+                    <a href="./index.html" class="navbar-link "
+                      >Studio</a
+                    >
+                  </li>
+                  <li class="navbar-list item list">
+                    <a href="./portfolio.html" class="navbar-link" current>Portfolio</a>
+                  </li>
+                  <li class="navbar-list item list">
+                    <a href="#" class="navbar-link">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="container-address">
+              <address class="address">
+                <ul class="address-block">
+                  <li class="contacts-list item list">
+                    <a href="mailto:info@devstudio.com" class="contacts-mail"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="contacts-list item list">
+                    <a href="tel:+110001111111" class="contacts-tel"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="mobil-menu-link">
+              <ul class="personal-links list">
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="personal-item">
+                  <a href="#" class="personal-link">
+                    <svg class="personal_media-icon">
+                      <use
+                        href="./images/social_links/symbol-defs.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -92,7 +161,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/bankapp.jpg"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio1.jpg     1x,
+                      ./images/images/mobile/portfolio/portfolio-1@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio1.jpg"
                     alt="example mobile banking app"
                   />
 
@@ -119,9 +192,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/nfc.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio2.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-2@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio2.jpg"
                     alt="example cashless payment"
                   />
                   <div class="portfolio_overlay">
@@ -144,9 +219,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/maditationapp.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio3.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-3@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio3.jpg"
                     alt="example maditation app on lap top"
                   />
                   <div class="portfolio_overlay">
@@ -169,9 +246,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/taxiapp.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio4.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-4@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio4.jpg"
                     alt="driver watching mobile taxi app"
                   />
                   <div class="portfolio_overlay">
@@ -195,9 +274,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/screen.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio5.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-5@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio5.jpg"
                     alt="mobile phone screen with 4 kinds of pictures"
                   />
                   <div class="portfolio_overlay">
@@ -221,9 +302,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/courses.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio6.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-6@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio6.jpg"
                     alt="red hair girl watching phone and smile"
                   />
                   <div class="portfolio_overlay">
@@ -246,9 +329,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/instagram.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio7.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-7@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio7.jpg"
                     alt="collage different instagram pages style"
                   />
                   <div class="portfolio_overlay">
@@ -273,9 +358,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/food.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio8.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-8@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio8.jpg"
                     alt="a woman carries fresh vegetables"
                   />
                   <div class="portfolio_overlay">
@@ -298,9 +385,11 @@
               <a href="#" class="portfilio_link">
                 <div class="portfolio_thumb">
                   <img
-                    src="./images/portfolio/cofeee.jpg"
-                    width="360"
-                    height="300"
+                    srcset="
+                      ./images/images/mobile/portfolio/portfolio9.jpg            1x,
+                      ./images/images/mobile/portfolio/portfolio-mobile-9@2x.jpg 2x
+                    "
+                    src="./images/images/mobile/portfolio/portfolio9.jpg"
                     alt="barista pours coffee into a cup"
                   />
                   <div class="portfolio_overlay">
@@ -407,5 +496,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>

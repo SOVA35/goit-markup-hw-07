@@ -1,9 +1,67 @@
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
-  
- 
+  .page-hader {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-section {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .nav-block {
+    padding: 0;
+  }
+  .logo {
+    padding: 0;
+    margin: 0;
+  }
+  .container-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+  .container-address {
+    margin-left: 332px;
+  }
+  .current::after {
+    top: 45px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+  .features {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .features-list::before {
+    display: inline-block;
+    width: 100%;
+  }
+  .work-section {
+    display: block;
+  }
 }
 
+@media screen and (min-device--pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-page {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/images/desktop/bg/hero-ofice-desk@2x-min.jpg);
+  }
+}
 /*----------special properties-------*/

@@ -1,26 +1,166 @@
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
+  }
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .container-nav {
+    display: block;
+  }
+  .container-menu {
+    display: flex;
+    vertical-align: middle;
+    margin-left: 120px;
+    justify-content: center;
+  }
+  .nav-block {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .page-header {
+    display: block;
   }
   .burger-btn {
     display: none;
   }
+  .navbar-link:hover,
+  .navbar-link:focus {
+    color: var(--accent-color-hover);
+  }
 
+  .navbar-list {
+    position: relative;
+    transition: 0.25s linear;
+  }
+  .current::after {
+    display: block;
+    top: 53px;
+  }
+  .navbar-link:hover,
+  .navbar-link:focus {
+    color: var(--accent-color-hover);
+  }
+  .close-mobile-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .mobil-menu-link {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    margin-left: 0;
+    gap: 40px;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    row-gap: 72px;
+    column-gap: 24px;
+    padding-bottom: 96px;
+  }
+
+  .team-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+    padding-bottom: 96px;
+    justify-content: center;
+  }
+  .customer-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 408px;
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .address-block {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 120px;
   }
-  .logo{
-    margin-right: 0;
+  .features-list::before {
+    display: none;
   }
-  .navbar {
-  display: flex;
-  margin-left: 0;
-  gap: 40px;
+  .features-text {
+    width: 356px;
+  }
+
+  .contacts-mail,
+  .contacts-tel {
+    font-size: 12px;
+  }
+  .footer {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-block {
+    display: inline-block;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 93px;
+
+    vertical-align: middle;
+  }
+  .footer-logo {
+    display: inline-block;
+    max-width: 264px;
+    margin-bottom: 72px;
+    margin-right: 24px;
+  }
+  .footer-logo > .logo {
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .social-links {
+    display: inline-block;
+    margin-left: 0;
+  }
+  .form-footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
 }
 
-}
-@media screen and (max-width: 1120px) {
+@media screen and (min-device--pixel-ratio: 2) and (min-width: 767px),
+  screen and (min-resolution: 192dpi) and (min-width: 767px),
+  screen and (min-resolution: 2dppx) and (min-width: 767px) {
+  .hero-page {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/images/tablet/bg/hero-tablet@2x-min.jpg);
+  }
 }
