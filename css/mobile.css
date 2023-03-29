@@ -8,6 +8,7 @@
   }
   .container-menu {
     display: block;
+    width: 100%;
   }
 
   .form {
@@ -49,7 +50,8 @@
     background-color: rgba(244, 244, 253, 1);
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
   .hero-page {
     padding: 112px 39px;
     margin-bottom: 0;
@@ -59,24 +61,19 @@
     max-width: 392px;
   }
   .header-section {
-    position: relative;
-    padding: 24px 15px 24px 15px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
   }
 
-  .team {
-    padding-top: 96px;
-    padding-bottom: 0;
-    background-color: rgba(244, 244, 253, 1);
-  }
   .team-list {
     display: flex;
     flex-direction: column;
     gap: 72px;
   }
   .container-team {
-    padding: 0 82px 96px;
+    padding-bottom: 96px;
   }
   .team-image {
     width: 100%;
@@ -113,14 +110,13 @@
     flex-direction: column;
     gap: 72px;
     width: 100%;
-    padding: 96px 15px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .footer-block {
     width: 100%;
     display: block;
-    padding-left: 15px;
-    padding-right: 15px;
 
     margin-bottom: 0;
   }
@@ -135,7 +131,8 @@
   .footer {
     display: block;
     text-align: center;
-    padding: 96px 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .form-footer {
     display: block;
@@ -165,7 +162,7 @@
     margin: 0 auto;
     margin-bottom: 16px;
     margin-top: 16px;
-    max-width: 100%;
+    width: 100%;
   }
   .form-field {
     display: block;
@@ -226,9 +223,11 @@
   .container-menu.is-open .address-block {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     gap: 40px;
     margin-bottom: 48px;
   }
+
   .buttons-list {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +252,7 @@
   .container-menu.is-open .contacts-tel {
     font-size: 36px;
     font-weight: 700;
+    width: v;
   }
   .container-menu.is-open .mobil-menu-link {
     margin-right: 36px;
@@ -280,12 +280,45 @@
     display: none;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container {
+    max-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .modal {
+    max-width: 316px;
+    height: 620px;
+  }
+  .container-menu.is-open .contacts-tel {
+    font-size: 26px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .input-info {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  width: 100%;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .work-section {
     display: none;
   }
   .features-list::before {
     display: none;
+  }
+  .team {
+    display: flex;
+    justify-content: center;
+    padding-top: 96px;
+    padding-bottom: 0;
+    background-color: rgba(244, 244, 253, 1);
   }
 }
 
